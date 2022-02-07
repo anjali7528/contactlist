@@ -1,0 +1,57 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+
+table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    width: 80%;
+    height: 20%
+}
+
+tr{
+    background-color: rgb(19, 117, 156);
+    color: white;
+    border-collapse:collapse ;
+    
+}
+
+tr:hover{
+    background-color: gray;
+    color: black;
+}
+
+td{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+form{
+
+    margin: 2%;
+    text-align: center;
+}
+
+th{
+    color:rgb(23, 3, 78)
+}
+
+#crossimg{
+    background-color:white ;
+    color:rgb(95, 17, 17);
+}
+
+
+
+
+
+

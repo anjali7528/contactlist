@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <script src="https://kit.fontawesome.com/415402b1ac.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading"> My contact list
+        <i class ="fas fa-address-book"></i></h1>
+        <div>
+            <form class ="search" action="/search-contact" method="GET">
+                <input type="text"  placeholder ='search name' name="searchname">
+                <button  id='search' type='search' >search</button>
+
+            </form>
+        </div>
+        <div>
+            <table id="contact-table">
+                
+                    <th>Name</th>
+                    <th>Phone no.</th>
+                   <th>Remove</th>
+                <% for(let i of contacts_list){%>
+                <tr>
+                    <td>
+                        <p><%= i.name %></p>
+                        
+                           
+                    </td>
+                    <td>
+                        <p><%= i.phone %></p
+                   
+                    </td>
+                    <td class = "crossimgblock">
+                        <a href=" /delete-contact/?id=<%= i._id%>">
+                            <i id="crossimg" class="fas fa-window-close"></i>
+                        </a>
+                    </td>
+                </tr>
+                
+                   <%} %>
+                </table>
+        </div>
+        <form action="/create-contact" method="POST">
+             <input type="text" name="name" placeholder="enter name" required>
+             <input type="number" name="phone" placeholder="enter phone">
+             <button type="submit">Add contact</button>
+        </form>
+
+        <script type ="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
